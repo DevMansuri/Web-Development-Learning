@@ -10,24 +10,16 @@ h1 {
 }
 #title {
     background-color: #ff4c68;
+
 }
 .container-fluid {
-    padding: 3% 15%;
+    padding: 3% 15% 7%;
 }
 .container {
     padding: 0;
 }
-.rotate {
-    width: 60%;
-    
-        -webkit-transform: rotate(30deg);
-        -moz-transform: rotate(30deg);
-        -o-transform: rotate(30deg);
-        -ms-transform: rotate(30deg);
-        transform: rotate(30deg);
-    
-}
 /*888888888888 Navbar Section 88888888888888888888888888888*/
+
 .navbar {
     padding : 0 0 4.5rem;
 }
@@ -50,12 +42,24 @@ h1 {
 .download-button {
     margin: 5% 3% 5% 0;
 }
+.rotate-image {
+    width: 60%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
+}
+.title-image {
+    position: relative;
+}
+
 
 
 /* ********************Features Section******************************** */
 
 #features {
     padding: 7% 15%;
+    background-color: #fff;
+    position: relative;
 }
 #features p {
     color: #8f8f8f;
@@ -120,9 +124,21 @@ h2 {
 
 }
 /* 888888888888888888888pricing section */
-.card-footer {
+#pricing {
+    padding: 100px;
     text-align: center;
 }
-.btn {
-    width: 90%;
+.pricing-column {
+    padding: 3% 2%;
+}
+
+@media (max-width : 1028px) {
+    #title {
+        text-align: center;
+    }
+    .rotate-image {
+        transform: rotate(0);
+        position: static;
+    }
+
 }
