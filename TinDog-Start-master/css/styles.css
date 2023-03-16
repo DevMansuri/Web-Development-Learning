@@ -18,7 +18,8 @@ h1 {
 .container {
     padding: 0;
 }
-/*888888888888 Navbar Section 88888888888888888888888888888*/
+
+/* Navbar Section */
 
 .navbar {
     padding : 0 0 4.5rem;
@@ -54,7 +55,7 @@ h1 {
 
 
 
-/* ********************Features Section******************************** */
+/*Features Section */
 
 #features {
     padding: 7% 15%;
@@ -82,7 +83,7 @@ h1 {
     padding: 4.5%;
 }
 
-/* 888888888888888888888888Testmonial Section************************* */
+/* Testmonial Section */
 
 #testimonials {
     background-color: #ef8172;
@@ -109,7 +110,7 @@ h2 {
     padding: 20px;
 }
 
-/*888888888888888888888888 press section */
+/*press section */
 
 #press {
     background-color: #ef8172;
@@ -123,7 +124,7 @@ h2 {
     
 
 }
-/* 888888888888888888888pricing section */
+/* pricing section */
 #pricing {
     padding: 100px;
     text-align: center;
@@ -141,4 +142,42 @@ h2 {
         position: static;
     }
 
+}
+
+/* Call to Action */
+
+#cta {
+    background-color: #ef8172;
+    text-align: center;
+    padding: 7% 15%;
+
+}
+#cta h3 {
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 1.5;
+    color: #fff;
+}
+.cta-download-button {
+    margin: 5% 3% 5% 0;
+}
+
+/* 88888888888888888888footer section */
+
+#footer {
+    background-color: #fff;
+    text-align: center;
+    padding: 100px;
+}
+#footer p {
+    color: #8f8f8f;
+    font-size: 0.75rem;
+}
+
+.footer-icon {
+    padding: 10px;
+}
+.footer-icon:hover {
+    color: #ef8172;
 }
