@@ -1,0 +1,11 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather rpoject\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[D\u001b[C\u001b[\u001b[D\u001b[C\u001b\u001b[C\u001b[C\u001b[C\u001b[C\u001b Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nadim Mansuri",
+  "license": "ISC"
+}
