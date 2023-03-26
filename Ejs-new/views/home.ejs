@@ -2,14 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <%- include('header'); -%>
+    <%- include('partials/header'); -%>
 </head>
 <body>
-    <h1>Home</h1>
-    <p> <%= startingContent %></p>    
+        <h1>Home</h1>
+        <p> <%= startingContent %></p>
+        <% compose.forEach(function(title) { %>
+
+          <h1><%=title.title %></h1>
+          <p><%=title.body.substring(0,100) +"..." %>
+          <a href="/compose/<%= title.title %>">Read more</a>
+          </p>
+        <%})%>
+
+        
 </body>
-<%- include('footer'); -%>
+<%- include('partials/footer'); -%>
 </html>
