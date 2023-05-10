@@ -1,4 +1,5 @@
 //jshint esversion:6
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const ejs = require('ejs');
@@ -6,6 +7,7 @@ const mongoose = require("mongoose");
 const encryption = require("mongoose-encryption");
  
 const app = express();
+console.log(process.env.API_KEY);
  
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
@@ -13,13 +15,13 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect("mongodb://127.0.0.1:27017/userDB",{useNewUrlParser : true});
 
+
 const userSchema = new mongoose.Schema({
   email : String,
   password : String 
 });
 
-const secret = "ThisIsSecret";
-userSchema.plugin(encryption,{secret : secret , encryptedFields: ["password"]});
+userSchema.plugin(encryption,{secret : process.env.SECRET, encryptedFields: ["password"]});
 
 const User = mongoose.model("User", userSchema );
 
@@ -35,19 +37,21 @@ app.get("/login" ,function(req,res) {
 app.get("/register" ,function(req,res) {
     res.render("register");
 });
- app.post("/register" ,function(req,res) {
+ 
+app.post("/register" ,function(req,res) {
 
     const newUser = new User({
         email: req.body.username,
         password : req.body.password
     });
-     newUser.save()
-     .then(function() {
+    newUser.save()
+    .then(function() {
         res.render("login");
-     }).catch(function(err) {
+    })
+    .catch(function(err) {
         console.log(err);
-     });
- });
+    });
+});
 
 app.post("/login", function(req,res) {
 
